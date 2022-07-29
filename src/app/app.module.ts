@@ -1,16 +1,20 @@
+import { NotFoundComponent } from './not-found/not-found.component';
 import { ClientModule } from './client/client.module';
 
 
-import { LayoutModule } from './layout/layout.module';
+import { LayoutModule } from './client/layout/layout.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './securite/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotFoundComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
