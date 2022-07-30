@@ -1,3 +1,5 @@
+import { CatalogueService } from './../../../shared/services/catalogue.service';
+import { Catalogue } from './../../../shared/models/catalogue';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogueComponent implements OnInit {
 
-  constructor() { }
+  Catalogue: Catalogue|undefined
+  constructor( private myservice:CatalogueService) { }
 
   ngOnInit(): void {
+    this.myservice.getCatalogues().subscribe((data)=>this.Catalogue=data)
   }
 
 }

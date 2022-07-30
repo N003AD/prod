@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,17 +10,18 @@ import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    FooterComponent,
     HeaderComponent,
+    FooterComponent,
     HomeComponent
   ],
   imports: [
     CommonModule,
+    RouterModule,
     LayoutRoutingModule
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ]
 })
 export class LayoutModule { }

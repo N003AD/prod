@@ -1,3 +1,5 @@
+import { RouterModule } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ClientModule } from './client/client.module';
 
@@ -13,14 +15,16 @@ import { LoginComponent } from './securite/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent,
     LoginComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
-    ClientModule
+    ClientModule,
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

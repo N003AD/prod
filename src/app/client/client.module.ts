@@ -1,3 +1,5 @@
+import { HeaderComponent } from './layout/header/header.component';
+import { RouterModule } from '@angular/router';
 import { DetailsComponent } from './pages/details/details.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { NgModule } from '@angular/core';
@@ -21,10 +23,14 @@ import { LayoutModule } from './layout/layout.module';
   imports: [
     CommonModule,
     ClientRoutingModule,
-    LayoutModule
+    LayoutModule,
+    RouterModule
   ],
   exports: [
+    CommonModule,
+    ClientRoutingModule,
     CardsComponent,
+    ListeComponent
   ]
 })
 export class ClientModule { }
