@@ -1,10 +1,9 @@
 
-
-
 <div class="d-flex flex-column">
   <nav class="navbar navbar-expand-lg bg-warning">
     <div class="container-fluid">
       <img src="assets/images/samaburger.png" class="" alt="..." width="7%">
+
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -17,34 +16,57 @@
         <span class="navbar-text">
 
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="d-flex home">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" routerLink="login">Se Connecter</a>
             </li>
-          <li class="nav-item">
-            <a class="nav-link active" routerLink="login">Se Connecter</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" routerLink="#">Créer un compte</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="#">Créer un compte</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="#">Panier</a>
+            </li>
+            </div>
+
         </ul>
         </span>
       </div>
     </div>
   </nav>
 
-  <!--   -->
+  <div class="d-flex justify-content-center m-3">
 
-<div class="filtre">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="filtreTop">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" routerLink="/catalogue">Catalogues</a></li>
-                <li class="nav-item"><a class="nav-link active" routerLink="/burger">Burgers</a></li>
-                <li class="nav-item"><a class="nav-link active" routerLink="/burger">Menu</a></li>
-          </ul>
-    </div>
-</nav>
-</div>
+      <button class="nav-link active"  (click)="filtre('catalogue')" >Catalogues</button>
+
+
+
+      <button class="nav-link active"  (click)="filtre('menu')" >Menu</button>
+
+
+      <button class="nav-link active"  (click)="filtre('burger')" >Burger</button>
+
+  </div>
+
+
+
+
+  <!-- <div class="d-flex justify-content-end">
+
+    <nav class="navbar navbar-expand-lg bg-warning nav2" >
+
+        <select class="form-select " aria-label="Default select example" >
+          <option selected>Filter menu par burger, menu ou catalogue</option>
+          <option value="1" (click)="filtre('catalogue')">Catalogues</option>
+          <option value="2" (click)="filtre('burger')">Burgers</option>
+          <option value="3" (click)="filtre('menu')">Menu</option>
+        </select>
+
+    </nav>
+  </div> -->
+
 
 
 

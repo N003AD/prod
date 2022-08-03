@@ -1,3 +1,5 @@
+import { Details } from './../../../shared/models/details';
+import { DetailsService } from './../../../shared/services/details.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-
-  constructor() { }
+ details:Details|null=null
+  constructor( private myservice:DetailsService) { }
 
   ngOnInit(): void {
+    this.myservice.getDetails().subscribe((data)=>this.details=data)
+
   }
 
 }

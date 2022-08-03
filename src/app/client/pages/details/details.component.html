@@ -1,1 +1,103 @@
-<p>details works!</p>
+<app-header></app-header>
+
+
+
+
+
+
+
+
+<!-- {{details|json}} -->
+
+<!-- <div class="montantPanier d-flex justify-content-end"> -->
+<div class="montantPanier d-flex">
+
+  <h5 >Montant panier: 6000Fcfa</h5>
+</div>
+<div class="principal d-flex">
+  <div class="d-flex m-5 ">
+    <div class="burger ">
+    <img src="data:image/png;base64,{{details?.burger?.image}}" class="" alt="..." width="100%">
+
+    <div class="nomBurger d-flex m-4">Burger avec Viande <br>{{details?.burger?.prix}}Fcfa</div>
+    <div class=" d-flex m-4">
+      <button type="button" class="btn btn-danger">-</button>
+      <button type="button" class="btn btn-light">2</button>
+      <button type="button" class="btn btn-danger">+</button>
+    </div>
+  </div>
+  <div class="description m-3">
+    <p>
+      Pain grillé, burger 130g, fromage,
+      oignon caramélisé, tomate,
+      oignon rouge, cornichons,
+      mayonnaise sauce <br> et sauce
+      salad spéciale
+    </p>
+  </div>
+</div>
+<div class="boissons m-5 ">
+
+  <div class="boisson d-flex m-sm-5">
+    <h4>Veuillez choisir des compléments</h4>
+        <img src="assets/images/fanta.png" class="" alt="..." width="10%" height="90%">
+        <input type="checkbox" name="" id="">
+
+        <div class="d-flex">
+          <p>1000 Fcfa</p>
+        </div>
+        <img src="assets/images/fanta.png" class="" alt="..." width="10%" height="90%">
+        <input type="checkbox" name="" id="">
+
+        <div class="d-flex">
+          <p>700 Fcfa</p>
+        </div>
+        <img src="assets/images/fanta.png" class="" alt="..." width="10%" height="90%">
+        <input type="checkbox" name="" id="">
+        <div class="d-flex">
+          <p>800 Fcfa</p>
+        </div>
+  </div>
+  <div class="frite">
+          <img src="assets/images/frite1.png" class="" alt="..." width="15%" height="90%">
+          <input type="checkbox" name="" id="">
+          <div class="d-flex">
+            <p>1000 Fcfa</p>
+          </div>
+          <img src="assets/images/frite2.png" class="" alt="..." width="15%" height="90%">
+          <input type="checkbox" name="" id="">
+          <div class="d-flex">
+            <p>1000 Fcfa</p>
+          </div>
+          <img src="assets/images/frite3.png" class="" alt="..." width="15%" height="90%">
+          <input type="checkbox" name="" id="">
+          <div class="d-flex">
+            <p>1000 Fcfa</p>
+          </div>
+  </div>
+
+
+</div>
+</div>
+
+
+
+<div class=" d-flex justify-content-end justify-content-evenly">
+  <div class="d-flex justify-content-end ">
+    <button class="btn btn-light justify-content-lg-start" type="button" routerLink="/client/catalogue"><< Continuer mes achats</button>
+
+  </div>
+  <div class="d-flex justify-content-start">
+
+    <button class="btn btn-danger justify-content-lg-start" type="button" >Accéder à mon panier</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

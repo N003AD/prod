@@ -5,3 +5,6 @@ export interface Catalogue{
   menus: Produits[]
   produits: Produits[]
 }
+
+
+

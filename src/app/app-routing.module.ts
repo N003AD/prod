@@ -7,6 +7,7 @@ const routes: Routes = [
 
   { path: 'client', loadChildren: () => import('./client/client.module').then(m => m.ClientModule) },
   { path: '', redirectTo: 'client',pathMatch:"full"},
+
   { path: "**",component: NotFoundComponent}
 ];
 
