@@ -7,7 +7,7 @@ import { map, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class  CatalogueService {
-    private url:string = "http://localhost:3000/catalogues";
+    private url:string = "http://localhost:3000/catalogue";
    // private url:string = "http://localhost:8000/api/catalogues";
   constructor( private http:HttpClient ) {
 
@@ -18,10 +18,10 @@ export class  CatalogueService {
         data=>{
           // console.log(data['hydra:member'][0].burger)
           let Catalogues: Catalogue={
-            burgers: data['hydra:member'][0].burger,
+            burgers: data['hydra:member'][0].burgers,
 
-            menus: data['hydra:member'][1].menu,
-            produits:[... data['hydra:member'][0].burger,...data['hydra:member'][1].menu]
+            menus: data['hydra:member'][1].menus,
+            produits:[... data['hydra:member'][0].burgers,...data['hydra:member'][1].menus]
           }
           return Catalogues
         }
